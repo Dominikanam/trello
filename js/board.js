@@ -8,7 +8,8 @@ export default class Board {
 		this.addColumn = this.addColumn.bind(this);
 
 		this.element = document.querySelector('#board .column-container');
-		document.querySelector('#board .create-column').addEventListener('click', this.addColumn);
+		document.querySelector('#board .create-column')
+			.addEventListener('click', () => this.addColumn());
 
 		if (data && data.length) {
 			data.forEach(this.addColumn);

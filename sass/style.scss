@@ -4,3 +4,137 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url(https://images.unsplash.com/photo-1530053969600-caed2596d242?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+section {
+
+	.wave {
+		position: absolute;
+		width: 100%;
+		height: 186px;
+		bottom: 0;
+		left: 0;
+		opacity: 0.5;
+		background: url(https://i.stack.imgur.com/IowOF.png);
+		animation: animate 10s linear infinite;
+	}
+
+	@keyframes animate
+	{
+		0%
+		{
+			background-position: 0;
+		}
+		100%
+		{
+			background-position: 1920px;
+		}
+	}
+
+	.wave:before {
+		content: '';
+		width: 100%;
+		height: 186px;
+		background: url(https://i.stack.imgur.com/IowOF.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.4;
+		animation: animate-reverse 8s linear infinite;
+	}
+
+	@keyframes animate-reverse
+	{
+		0%
+		{
+			background-position: 1920px;
+		}
+		100%
+		{
+			background-position: 0;
+		}
+	}
+
+	.wave:after {
+		content: '';
+		width: 100%;
+		height: 186px;
+		background: url(https://i.stack.imgur.com/IowOF.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.7;
+		animation: animate 20s linear infinite;
+		animation-delay: -5s;
+	}
+
+}
+
+.board {
+	h1 {
+		color: #243D75;
+		text-shadow: 2px 2px 5px #8497C3;
+	}
+
+	.create-column {
+		background-color: #3B548C;
+		color: #B7C4E1;
+		border: none;
+		height: 40px;
+		width: 100px;
+		font-weight: bold;
+		border-radius: 3px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+}
+
+.column-container {
+	&:before, &:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	& > div {
+		float: left;
+		margin: 20px;
+		border-radius: 10px;
+		background-color: rgba(89, 112, 164, 0.7);
+		padding: 10px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+		.column {
+			position: relative;
+			width: 300px;
+
+			ul {
+				list-style-type: none;
+
+				li {
+					.card {
+						padding: 10px;
+						margin: 10px;
+						background-color: white;
+						position: relative;
+						border-radius: 5px;
+					}
+				}
+			}
+
+			.btn-delete {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			.add-card {
+				margin: 10px auto;
+				display: block;
+			}
+		}
+	}
+}
