@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url(https://images.unsplash.com/photo-1530053969600-caed2596d242?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+	background-image: url(https://wallpapercave.com/wp/jgZcrie.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -77,11 +77,14 @@ section {
 .board {
 	h1 {
 		color: white;
-		text-shadow: 2px 2px 5px #8497C3;
+		text-shadow: 2px 2px 5px #1955DE;
+		text-align: center;
+		padding: 20px;
+		font-size: 50px;
 	}
 
 	.create-column {
-		background-color: rgb(60, 82, 247);
+		background-color: #326AEC;
 		color: white;
 		border: none;
 		height: 40px;
@@ -89,6 +92,8 @@ section {
 		font-weight: bold;
 		border-radius: 3px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		display: block;
+		margin: 0 auto;
 		}
 }
 
@@ -103,13 +108,20 @@ section {
 		float: left;
 		margin: 20px;
 		border-radius: 10px;
-		background-color: rgba(89, 112, 164, 0.7);
+		background-color: rgba(91, 135, 238, 0.4);
 		padding: 10px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 		.column {
 			position: relative;
 			width: 300px;
+
+			h2 {
+				color: white;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: center;
+			}
 
 			ul {
 				list-style-type: none;
@@ -121,6 +133,16 @@ section {
 						background-color: white;
 						position: relative;
 						border-radius: 5px;
+						background-color: white;
+						color: #1955DE;
+						padding: 20px;
+						font-weight: bold;
+						font-size: 18px;
+						box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+						.btn-delete {
+							margin: 10px;
+						}
 					}
 				}
 			}
@@ -129,11 +151,25 @@ section {
 				position: absolute;
 				top: 0;
 				right: 0;
+				background-color: #1955DE;
+				color: white;
+				border-radius: 3px;
+				border: none;
+				padding: 3px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			}
 
 			.add-card {
 				margin: 10px auto;
 				display: block;
+				background-color: #326AEC;
+				color: white;
+				border: none;
+				height: 40px;
+				width: 100px;
+				font-weight: bold;
+				border-radius: 3px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			}
 		}
 	}
