@@ -103,6 +103,7 @@ section .wave:after {
 .column-container > div .column {
   position: relative;
   width: 300px;
+  min-height: 200px;
 }
 
 .column-container > div .column h2 {
