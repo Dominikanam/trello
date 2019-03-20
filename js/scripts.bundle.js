@@ -142,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./board */ \"./js/board.js\");\n/* harmony import */ var _data_columns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/columns */ \"./data/columns.js\");\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n\t// INITIALIZING BOARD\r\n\tnew _board__WEBPACK_IMPORTED_MODULE_0__[\"default\"](_data_columns__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\r\n});\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./board */ \"./js/board.js\");\n/* harmony import */ var _data_columns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/columns */ \"./data/columns.js\");\n\r\n\r\n\r\nvar myHeaders = {\r\n\t'Content-Type': 'application/json',\r\n\t'X-Client-Id': '3701',\r\n\t'X-Auth-Token': 'dc034be924f754702e8307cb7b884558'\r\n};\r\n\r\nvar baseUrl = 'https://kodilla.com/pl/bootcamp-api';\r\n\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n\tfetch(baseUrl + '/board', { headers: myHeaders })\r\n\t\t.then(function(resp) {\r\n\t\t\treturn resp.json();\r\n\t\t})\r\n\t\t.then(function(resp) {\r\n\t\t\t// INITIALIZING BOARD\r\n\t\t\tnew _board__WEBPACK_IMPORTED_MODULE_0__[\"default\"](resp.columns);\r\n\t\t});\r\n});\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 
