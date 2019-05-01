@@ -32,7 +32,6 @@ class Proxy {
 	async createColumn(name) {
 		const data = new FormData();
 		data.append('name', name);
-		console.log(data.getAll('name'));
 		return await this.sendRequest(config.columnPost, 'POST', data);
 	}
 
@@ -41,12 +40,16 @@ class Proxy {
 		return await this.sendRequest(url, 'DELETE');
 	}
 
-	async createCard(name) {
-		return await this.sendRequest(config.columnPost, 'POST', { name });
+	async createCard(name, columnId) {
+		console.log(name, columnId);
+		const data = new FormData();
+		data.append('name', name);
+		data.append('bootcamp_kanban_column_id', columnId);
+		return await this.sendRequest(config.cardPost, 'POST', data);
 	}
 
 	async removeCard(id) {
-		const url = config.columnDelete.replace('<columnId>', id);
+		const url = config.cardDelete.replace('<cardId>', id);
 		return await this.sendRequest(url, 'DELETE');
 	}
 }

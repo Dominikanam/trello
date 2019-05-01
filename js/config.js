@@ -6,5 +6,7 @@ export default {
 	baseUrl,
 	boardGet: `${baseUrl}/board`,
 	columnPost: `${baseUrl}/column`,
-	columnDelete: `${baseUrl}/column/<columnId>`
+	columnDelete: `${baseUrl}/column/<columnId>`,
+	cardPost: `${baseUrl}/card`,
+	cardDelete: `${baseUrl}/card/<cardId>`
 };

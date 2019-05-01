@@ -1,37 +1,162 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-body { background-image: url(https://wallpapercave.com/wp/jgZcrie.jpg); background-size: cover; background-attachment: fixed; }
+body {
+  background-image: url(https://wallpapercave.com/wp/jgZcrie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-section .wave { position: absolute; width: 100%; height: 186px; bottom: 0; left: 0; opacity: 0.5; background: url(https://i.stack.imgur.com/IowOF.png); animation: animate 10s linear infinite; }
+section .wave {
+  position: absolute;
+  width: 100%;
+  height: 186px;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  background: url(https://i.stack.imgur.com/IowOF.png);
+  animation: animate 10s linear infinite;
+}
 
-@keyframes animate { 0% { background-position: 0; }
-  100% { background-position: 1920px; } }
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 1920px;
+  }
+}
 
-section .wave:before { content: ''; width: 100%; height: 186px; background: url(https://i.stack.imgur.com/IowOF.png); position: absolute; top: 0; left: 0; opacity: 0.4; animation: animate-reverse 8s linear infinite; }
+section .wave:before {
+  content: '';
+  width: 100%;
+  height: 186px;
+  background: url(https://i.stack.imgur.com/IowOF.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  animation: animate-reverse 8s linear infinite;
+}
 
-@keyframes animate-reverse { 0% { background-position: 1920px; }
-  100% { background-position: 0; } }
+@keyframes animate-reverse {
+  0% {
+    background-position: 1920px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
 
-section .wave:after { content: ''; width: 100%; height: 186px; background: url(https://i.stack.imgur.com/IowOF.png); position: absolute; top: 0; left: 0; opacity: 0.7; animation: animate 20s linear infinite; animation-delay: -5s; }
+section .wave:after {
+  content: '';
+  width: 100%;
+  height: 186px;
+  background: url(https://i.stack.imgur.com/IowOF.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  animation: animate 20s linear infinite;
+  animation-delay: -5s;
+}
 
-.board h1 { color: white; text-shadow: 2px 2px 5px #1955DE; text-align: center; padding: 20px; font-size: 50px; }
+.board h1 {
+  color: white;
+  text-shadow: 2px 2px 5px #1955DE;
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+}
 
-.board .create-column { background-color: #326AEC; color: white; border: none; height: 40px; width: 100px; font-weight: bold; border-radius: 3px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); display: block; margin: 0 auto; }
+.board .create-column {
+  background-color: #326AEC;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  margin: 0 auto;
+}
 
-.column-container:before, .column-container:after { content: ''; display: block; clear: both; }
+.column-container:before, .column-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
-.column-container > div { float: left; margin: 20px; border-radius: 10px; background-color: rgba(91, 135, 238, 0.4); padding: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.column-container > div {
+  float: left;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(91, 135, 238, 0.4);
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-.column-container > div .column { position: relative; width: 300px; min-height: 200px; }
+.column-container > div .column {
+  position: relative;
+  width: 300px;
+}
 
-.column-container > div .column h2 { color: white; font-weight: bold; text-transform: uppercase; text-align: center; }
+.column-container > div .column h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-.column-container > div .column ul { list-style-type: none; }
+.column-container > div .column ul {
+  list-style-type: none;
+  min-height: 100px;
+}
 
-.column-container > div .column ul li .card { padding: 10px; margin: 10px; background-color: white; position: relative; border-radius: 5px; background-color: white; color: #1955DE; padding: 20px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.column-container > div .column ul li .card {
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+  background-color: white;
+  color: #1955DE;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-.column-container > div .column ul li .card .btn-delete { margin: 10px; }
+.column-container > div .column ul li .card .btn-delete {
+  margin: 10px;
+}
 
-.column-container > div .column .btn-delete { position: absolute; top: 0; right: 0; background-color: #1955DE; color: white; border-radius: 3px; border: none; padding: 3px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.column-container > div .column .btn-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1955DE;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-.column-container > div .column .add-card { margin: 10px auto; display: block; background-color: #326AEC; color: white; border: none; height: 40px; width: 100px; font-weight: bold; border-radius: 3px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); position: absolute; bottom: 0; }
+.column-container > div .column .add-card {
+  margin: 10px auto;
+  display: block;
+  background-color: #326AEC;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*# sourceMappingURL=style.css.map */

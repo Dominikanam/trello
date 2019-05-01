@@ -5,8 +5,8 @@ import Proxy from './proxy';
 export default class Card {
 	constructor(data) {
 		this.id = data.id;
-		this.description = data.description || data;
-		this.element = generateTemplate(CardTemplate, { description: this.description }, 'li');
+		this.name = data.name;
+		this.element = generateTemplate(CardTemplate, { name: this.name }, 'li');
 
 		this.removeCard = this.removeCard.bind(this);
 

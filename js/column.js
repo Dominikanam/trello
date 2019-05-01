@@ -27,8 +27,8 @@ export default class Column {
 
 	async createCard() {
 		const name = prompt("Enter the name of the card");
-		const card = await Proxy.createCard(name);
-		this.renderCard(card);
+		const id = (await Proxy.createCard(name, this.id)).id;
+		this.renderCard({ id, name });
 	}
 
 	renderCard(data) {
